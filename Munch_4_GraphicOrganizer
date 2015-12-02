@@ -1,0 +1,65 @@
+digraph simple_map {
+
+A [label="Start"]
+B [label="Choice of Paths"]
+C [label="River"]
+D [label="Cottage"]
+E [label="Mountain"]
+F [label="Bridge"]
+G [label="Wading"]
+I [label="Cave"]
+J [label="Scaling"]
+K [label="Choice of Paths II"]
+L [label="Safety"]
+M [label="Bear Den"]
+N [label="Safety Kinda?"]
+O [label="Death By Wolves"]
+P [label="Game Over"]
+Q [label="Game Over"]
+R [label="Game Over"]
+S [label="Game Over"]
+T [label="End!!!"]
+U [label="Go through Front Door"]
+V [label="Go through Back Door"]
+W [label="Game Over"]
+X [label="Basement"]
+Y [label="Kitchen"]
+Z [label="Game Over"]
+AA[label="Right Tunnel"]
+BB[label="Left Tunnel"]
+
+A->B [label="commands", fontcolor=darkgreen ]
+B->C [label="path 1", fontcolor=blue ]
+B->D [label="path 2", fontcolor=yellow ]
+B->E [label="path 3",fontcolor=brown ]
+C -> F
+C -> G
+E -> I
+E -> J
+J -> P
+P -> E
+G -> Q
+Q -> C
+F -> K
+I -> AA
+I -> BB
+BB -> L
+AA -> M
+M -> R
+R -> I
+K -> N
+K -> O
+O -> S
+S -> K
+N -> T
+L -> T
+D -> U
+D -> V
+V -> X
+V -> Y
+X -> Z
+Y -> Z
+U -> W
+W -> D
+Z -> B
+}
